@@ -50,15 +50,22 @@ function renderHtml(obj) {
 
 function repositorysRender(obj) {
   let html = `
-    <div class="repo">
-        <h1 class="repo__name">${obj.name}</h1>
-    </div>`;
+  <a target="_blank" href="${obj.repos_url}"
+  >
+  <div class="repo">
+    <h1 class="repo__name">${obj.name}</h1>
+    <div class="info__repo">Starts: ${obj.stargazers_count}</div>
+    <div class="info__repo">Watches: ${obj.watches}</div>
+    <div class="info__repo">Forks: ${obj.forks}</div>
+  </div>
+</a>`;
   repositorys.insertAdjacentHTML("beforeend", html);
 }
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   container.innerHTML = "";
+  repositorys.innerHTML = "";
   download(input.value);
   input.value = "";
 });

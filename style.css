@@ -2,6 +2,9 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
 :root {
   --color-primary: rgb(37, 51, 244);
 }
@@ -116,6 +119,9 @@ h6 {
 }
 
 .repo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
@@ -136,4 +142,9 @@ h6 {
   width: 300px;
   height: 30px;
   margin-left: 330px;
+}
+
+.info__repo {
+  color: black;
+  font-size: 20px;
 }
